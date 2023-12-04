@@ -28,4 +28,9 @@ public class HealthCheckController {
         healthCheckData.put("visitedCount", visitedCount);
         return ResponseEntity.ok(healthCheckData);
     }
+
+    @GetMapping("/env")
+    public ResponseEntity<?> getEnv() {
+        return ResponseEntity.ok(env);
+    }
 }
